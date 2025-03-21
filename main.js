@@ -14,3 +14,18 @@ navLinks.addEventListener("click", (e) =>{
     menuBtnIcon.setAttribute("class", "ri-menu-line");
 })
 
+const scrollRevealOption = {
+    distance:"50px",
+    origin:"bottom",
+    duration:1000,
+}
+
+ScrollReveal().reveal("header .header__image img",{
+    ...scrollRevealOption,
+    origin:"right",
+})
+
+ScrollReveal().reveal("header .header__content h1",{
+    ...scrollRevealOption,
+    delay:500,
+})
