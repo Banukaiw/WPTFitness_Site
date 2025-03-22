@@ -218,6 +218,106 @@ nav .nav__links li{
 }
 
 
+.about{
+    background-color: var(--background-color-1);
+    overflow: hidden;
+}
+
+.about__container{
+    display: grid;
+    gap: 2rem;
+    
+}
+.about__image{
+    margin: auto;
+}
+
+
+.about__image img{
+    margin: auto;
+    max-width: 500px;
+    margin-inline: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+} 
+
+
+.about__content :is(.section__header, .section__desccription){
+    margin-bottom: 1rem;
+}
+
+.about__btn{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.Programs{
+    background-color: var(--backkground-color-2);
+}
+
+.Program__header{
+    display: grid;
+    
+    gap: 1rem;
+}
+
+.program__grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.program__card{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #464646;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.program__card:hover{
+    background-color: var(--secondary-color);
+}
+
+.program__card i{
+    font-size: 50px;
+    color: var(--extra-light);
+    margin-bottom: 1rem;
+}
+
+.program__card h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.program__card p{
+    margin-bottom: 1rem;
+    color: var(--extra-light);
+    line-height: 1.75rem;
+}
+
+.program__card a{
+    display: flex;
+    gap: 10px;
+    color: var(--extra-light);
+}
+
+.program__card a i{
+    font-size: 13px;
+}
+
+@media(width> 540px){
+    .program__grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+
+
 
 
 
@@ -247,6 +347,7 @@ nav .nav__links li{
         max-width: 75px;
     }
 
+ 
     .nav__menu__btn{
         display: none;
     }
@@ -284,12 +385,33 @@ nav .nav__links li{
         
     }
 
-    .header__content :is(h1, .section__desccription, .header__btn){
+    .header__content :is(h1, .section__description, .header__btn){
         text-align: left;
         
     }
 
     .header__stats{
         justify-content: flex-start;
+    }
+
+    .about__container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .about__content :is(.section__header, .section__description, .about__btn){
+        text-align: left;
+    }
+
+    .Program__header{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .Program__header :is(.section__header, .section__description){
+        text-align: left;
+        color: var(--extra-light);
+    }
+
+    .program__grid{
+        grid-template-columns: repeat(4,1fr);
     }
 }
