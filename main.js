@@ -29,3 +29,9 @@ ScrollReveal().reveal("header .header__content h1",{
     ...scrollRevealOption,
     delay:500,
 })
+
+
+
+const swiper = new Swiper(".swiper", {
+    loop: true,
+});
