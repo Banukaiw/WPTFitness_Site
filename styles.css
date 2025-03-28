@@ -82,7 +82,7 @@ nav{
     isolation: isolate;
     width: 100%;
     z-index: 9;
-    background-color: black; 
+    background-color: var(--background-color-2); 
 }
 
 nav .nav__header{
@@ -124,7 +124,7 @@ nav .nav__links{
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    background-color: black;
+    background-color: var(--background-color-3);
     transition: transform 0.5s;
     z-index: -1;
 }
@@ -252,12 +252,12 @@ nav .nav__links li{
 }
 
 .Programs{
-    background-color: var(--backkground-color-2);
+    background-color: var(--backkground-color-1);
 }
 
 .Program__header{
     display: grid;
-    
+    color: var(--extra-light);
     gap: 1rem;
 }
 
@@ -589,6 +589,17 @@ footer{
     .footer__col{
         margin: auto;
     }
+
+    .fotter__low{
+        padding: 1rem;
+        margin: 1rem;
+        color: var(--extra-light);
+        text-align: center;
+    }
+
+    .fotter__low h4{
+        margin-top: 1rem;
+    }
 }
 
 @media (width > 1024px){
@@ -599,6 +610,10 @@ footer{
     .program__card{
         padding: 1.5rem;
     }
+    .program__card i{
+        color: var(--secondary-color);
+    }
+
 
     .testimonial__card{
         padding: 1.5rem;
